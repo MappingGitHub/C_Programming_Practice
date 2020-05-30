@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+
+// In C using \a creates a beep sound.
+printf("Hello there,\nThanks to visit us. \n\a. ");
+
+return 0;
+
+}
