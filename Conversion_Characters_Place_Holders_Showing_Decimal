@@ -1,0 +1,21 @@
+//Conversion Characters, place holders, decimal
+//   %s for strings
+//   %d for decimals
+//   %d for float
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int main()
+{
+
+    printf("\n\n****** Italian Football ******\n\n");
+    printf("\n%s and %s are most Successful Italian Football Clubs Of All Time.\n\n","AC Milan","Juventus");
+    printf("AC Milan has achieved a total of %d national "
+            "and international titles as of the %d football season.\n\n",48,2019);
+    printf("AC Milan are set to post a loss of € %f million.\n\n",145.9566);
+    printf("AC Milan are set to post a loss of € %0.2f million.\n\n",145.9566);
+    printf("AC Milan are set to post a loss of € %0.1f million.\n\n",145.9566);
+    return 0;
+}
