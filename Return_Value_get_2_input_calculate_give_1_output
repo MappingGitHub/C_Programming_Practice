@@ -1,0 +1,25 @@
+//Return Values
+#include <stdio.h>
+#include <stdlib.h>
+
+float billCalculator(int num, float amount);
+int main()
+{
+    int num;
+    float amount;
+    printf("How many bills do you have to pay each month? \n");
+    scanf("%d",&num);
+    printf("How much is the average of each bill? \n");
+    scanf("%f",&amount);
+    printf("You probably need to pay $ %.2f each month for your bills. \n",billCalculator(num, amount));
+
+    return 0;
+}
+
+float billCalculator(int input1, float input2)
+{
+    float result=input1*input2;
+
+    return result;
+}
+
