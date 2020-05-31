@@ -1,0 +1,25 @@
+//Function_Prototype_or_Function_Interface
+
+/*
+A function prototype is simply the declaration of a function that
+specifies function's name, parameters and return type. It doesn't
+contain function body. A function prototype gives information to
+the compiler that the function may later be used in the program.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void printSomething();
+
+int main()
+{
+    printSomething();
+    return 0;
+}
+
+void printSomething(){
+printf("\n\nThis is a printing function\n");
+return;
+
+}
