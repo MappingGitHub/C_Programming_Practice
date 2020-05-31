@@ -1,0 +1,29 @@
+//input data by using scanf and pointer and array
+//always use one single "&" before each variable except arrays
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+ char name[20];
+ char lastname[20];
+
+int CURRENT_YEAR=2020;
+int age;
+int  BirthYear ;
+
+printf("What is your name? \n");
+scanf("%s",name);
+
+printf("What is your last name? \n");
+scanf("%s",lastname);
+
+printf("Please enter your birth year. \n");
+scanf("%d",&BirthYear);
+age=CURRENT_YEAR-BirthYear;
+
+printf("\nThank you %s %s",name,lastname);
+printf("\nso you are %d\n\n\n",age);
+    return 0;
+}
