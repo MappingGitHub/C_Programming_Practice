@@ -1,0 +1,34 @@
+// pass_by_address_or_reference
+#include <stdio.h>
+#include <stdlib.h>
+
+
+int pass_by_Value(int i);
+int pass_by_address_or_reference(int *i);
+
+int main()
+{
+    int Our_value=20;
+
+pass_by_Value(Our_value);
+printf("The result of passing by value will be unchanged,the output of this function is %d \n",Our_value);
+
+
+pass_by_address_or_reference(&Our_value);
+printf("The result of passing by address or referenc will be changed,the output of this function is %d \n",Our_value);
+
+    return 0;
+}
+
+int pass_by_Value(int i){
+ //this function doesn't change the value
+ i=40;
+ return;
+
+}
+int pass_by_address_or_reference(int *i){
+//this function takes memory address and set it to 5555555, it changed the variable itself not a copy of that variable
+*i=555555;
+return;
+
+}
