@@ -1,0 +1,35 @@
+//Type Casting in C --- Explicit Type Conversion
+//for example if we have an int varaibale like int a, we can use (float)a in calculation with other float cariables
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+int items;
+float money,average;
+
+
+printf("How many items did you buy online last week? \n");
+scanf("%d",&items);
+printf("How much did you paid for those %d items  \n",items);
+scanf("%f",&money);
+printf("so you spent $ %.2f \n",money);
+average= money/((float)items);
+printf("Your average spent money for each item was $ %0.2f",average);
+
+if (average>=1000)
+
+{
+    printf("\nIt's better for you to use a tracking system to track your packages . \n");
+}
+
+else
+{
+        printf("\nWe think you need to do more online shoppings.\n");
+}
+
+
+return 0;
+}
