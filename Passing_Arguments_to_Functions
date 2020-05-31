@@ -1,0 +1,26 @@
+//Passing Arguments to Functions
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void BitCoinCalculator(float salary);
+
+int main()
+{
+
+    BitCoinCalculator(1000);
+    BitCoinCalculator(1500);
+    BitCoinCalculator(2000);
+    BitCoinCalculator(2500);
+    BitCoinCalculator(3000);
+    return 0;
+}
+
+void BitCoinCalculator(float salary){
+        float BitCoin=salary*9507.16;
+printf("\n\n If your salary is $ %.2f, then you can buy B %0.2f \n",salary,BitCoin);
+
+return;
+
+}
+
