@@ -1,0 +1,45 @@
+//Nesting if Statements
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+char answer,answer2;
+int cardNumber;
+
+printf("Are you ready to pay? \n");
+printf("Please use 'Y' or 'N' \n");
+scanf("%c",&answer);
+if(answer=='Y' || answer=='y' )
+{
+    printf("Do you want to pay with Credit Card or Debit Card? \n");
+
+    scanf(" %c",&answer2);
+
+    if(answer2=='Y' || answer2=='y')
+        {
+    printf("Please enter your card number. \n");
+    scanf("%d",&cardNumber);
+    printf("Thank you \n");
+
+    }
+    if(answer2=='N' || answer2=='n' )
+        {
+    printf("Please wait for our online Customer Service. \n");
+    }
+
+}
+if(answer=='N' || answer=='n')
+{
+    printf("It's OK we'll wait for you. \n");
+
+}
+else
+{
+    printf("Please follow the instructions. \n");
+}
+
+
+return 0;
+}
