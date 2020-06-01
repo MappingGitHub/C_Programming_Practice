@@ -1,0 +1,22 @@
+//this code works but it has a small warning in compiler
+//Using_2_functions_for_Hello_World
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void Hello();
+void World();
+void main()
+{
+    Hello();
+    World();
+
+}
+
+void Hello(){
+printf("Hello ");
+}
+
+void World(){
+printf("World!\n");
+}
