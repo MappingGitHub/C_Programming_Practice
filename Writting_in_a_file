@@ -1,0 +1,22 @@
+//Writting_in_a_file
+//using_FILE_fopen_fclose_filePointer
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+
+{
+    //We always need a file pointer which is FILE(all capital)
+    FILE * file_pointer;
+
+    //fopen allow us to open the file.
+    file_pointer=fopen("File1.txt","w");
+    //In the C Programming Language, the fprintf function writes formatted output to stream.
+    fprintf(file_pointer,"This is First Message");
+    //The fclose function flushes any unwritten data in the stream's buffer.
+    fclose(file_pointer);
+
+
+    return 0;
+}
