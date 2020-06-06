@@ -1,0 +1,19 @@
+//Append_to_File
+//It adds new test to the end of existing text in file
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+
+{
+    //We always need a file pointer which is FILE(all capital)
+    FILE * file_pointer;
+    file_pointer=fopen("File1.txt","a");
+    // we use \n to add to a new line
+    fprintf(file_pointer,"\nThis is the second line.");
+
+    fclose(file_pointer);
+
+    return 0;
+}
