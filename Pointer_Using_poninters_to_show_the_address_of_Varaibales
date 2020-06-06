@@ -1,0 +1,36 @@
+//Using_poninters_to_show_the_address_of_Varaibales
+//Pointer is a special type of variable that can store the address of variables.
+//Pointer value is the memory address of another variable
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+
+{
+
+    printf("\nNote 1:Pointer is a special type of variable that can store the address of variables.\n");
+    int book=4;
+    char teacher[4]="Joe";
+    float payment=4200;
+    //usually we use a small p in to show the pointers
+    int * pbook=&book;
+    char * pteacher=&teacher;
+    float * ppayment=&payment;
+
+    printf("\n\nThese are the address of variables in memory:  \n");
+    printf("\n   Address                       Name                   Value\n");
+    printf("--------------------------------------------------------------------------------\n");
+    printf("%p \t\t %s \t\t %d \n",&book,"book        ",book,"\n");
+    printf("%p \t\t %s \t\t %s \n",&teacher,"teacher",teacher,"\n");
+    printf("%p \t\t %s \t\t %.2f \n",&payment,"payment",payment,"\n");
+    printf("\n\n");
+    printf("######################################################################################\n");
+    printf("\nNote 2:Pointer value is the memory address of another variable(Compare Address and Value of Pointer).\n");
+    printf("\nAddress of Pointer            Name of Pointer            Value of Pointer\n");
+    printf("---------------------------------------------------------------------------------\n");
+    printf("%p \t\t %s \t\t %p \n",&pbook,"pbook       ",pbook,"\n");
+    printf("%p \t\t %s \t\t %p \n",&pteacher,"pteacher",pteacher,"\n");
+    printf("%p \t\t %s \t\t %p \n",&ppayment,"ppayment",ppayment,"\n");
+    printf("\n\n\n");
+    return 0;
+}
