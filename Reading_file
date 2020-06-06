@@ -1,18 +1,16 @@
 //Reading_file
 
 /*
-File operation
-	
-Declaration & Description
-feof() 	Declaration: int feof(FILE *fp)
-
 feof functions is used to find the end of a file. In a C program, we use feof() function as below.
 feof(fp);
 
 where,
 fp – file pointer
-
-
+---------------------------------------------------
+In C/C++, getc() returns EOF when end of file is reached. getc() also returns EOF when it fails.
+So, only comparing the value returned by getc() with EOF is not sufficient to check for actual
+end of file. To solve this problem, C provides feof() which returns non-zero value only if end
+of file has reached, otherwise it returns 0.
 */
 
 #include <stdio.h>
