@@ -1,0 +1,39 @@
+//Reading_file
+
+/*
+File operation
+	
+Declaration & Description
+feof() 	Declaration: int feof(FILE *fp)
+
+feof functions is used to find the end of a file. In a C program, we use feof() function as below.
+feof(fp);
+
+where,
+fp – file pointer
+
+
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+
+{
+    //We always need a file pointer which is FILE(all capital)
+    FILE * file_pointer;
+    file_pointer=fopen("File1.txt","r");
+    char singleLine[200];
+
+
+    while(!feof(file_pointer)){
+
+        fgets(singleLine,200,file_pointer);
+        puts(singleLine);
+
+    }
+    fclose(file_pointer);
+
+    return 0;
+}
