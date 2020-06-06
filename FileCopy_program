@@ -1,0 +1,46 @@
+//FileCopy_program_copies_the_contents_of_one_file_to_a_destination_file
+
+#include <stdio.h>
+#include <stdlib.h> // For exit()
+void FileCopy();
+int main()
+{
+   FileCopy();
+	return 0;
+}
+void FileCopy(){
+
+	FILE *File1, *File2;
+	char filename[100], c;
+	printf("Please enter your first existing text file name with its suffix(.txt) for reading. \n");
+	scanf("%s", filename);
+
+	// Open one file for reading
+	File1 = fopen(filename, "r");
+	if (File1 == NULL)
+	{
+		printf("There is something wrong with your %s. \n", filename);
+		exit(0);
+	}
+	printf("Please enter your second existing text file name with its suffix(.txt) for writing. \n");
+	scanf("%s", filename);
+
+	// Open another file for writing
+	File2 = fopen(filename, "w");
+	if (File2 == NULL)
+	{
+		printf("There is something wrong with your %s. \n", filename);
+		exit(0);
+	}
+	// Read contents from file
+	c = fgetc(File1);
+	while (c != EOF)
+	{
+		fputc(c, File2);
+		c = fgetc(File1);
+	}
+	printf("\nFile1 Contents copied to %s", filename);
+	fclose(File1);
+	fclose(File2);
+
+}
