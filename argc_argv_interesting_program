@@ -1,0 +1,33 @@
+//What does int argc, char* argv[] mean?
+// argc in number of things that user enter in command line on a terminal. argc stands for argument counter
+//argv is an array which keep string values of things that user enter in the terminal.argv stands for argument value
+//Run this program in a terminal for first time using ./filename(binary filename)
+//Run this program for second time using /filename 5 apple 6 Jack 2
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char*argv[] )
+{
+
+int i,sum=0;
+    
+//We want to see what is the bumber of argc
+    printf("argc=%d\n",argc);
+
+//We want to see argv values.
+printf("Let's see what is in argv[]\n");
+if (argc>1)
+{
+for (i=0;i<argc;i++)
+{
+printf("argv[%d]=%s\n",i,argv[i]); 
+
+//atoi() convert string to integer
+sum +=atoi(argv[i]);
+}
+printf("Total= %d\n",sum);
+}
+    return 0;
+}
