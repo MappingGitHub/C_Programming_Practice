@@ -1,0 +1,33 @@
+//Process ID in C
+//The <sys/wait.h> header defines the following symbolic constants for use with waitpid(): 
+
+/*
+getpid() returns the process ID (PID) of the calling process.  (This
+is often used by routines that generate unique temporary filenames.)
+*/
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <sys/wait.h>
+
+
+int main(int argc, char* argv[]){
+  
+    int id=fork();
+    if (id==0){
+        sleep(5);
+    }
+    printf("Current ID: %d,Parent ID: %d\n",
+        getpid(),getppid());
+
+int res=wait(NULL);
+if (res==-1){
+    printf("No Children to wait for \n");
+}else{
+   printf("%d finished execution\n",res);
+}
+
+   return 0;
+
+}
