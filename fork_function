@@ -1,0 +1,28 @@
+//fork function
+//for each fork() function, creates 2^n process
+//unistd is a Linux specific library
+//Every single process in Linux, windows,... had a process ID
+//Child Process is always zero
+//if id iz not zeero it means we are in main process
+//Error in process is -1
+/*In the C and C++ programming languages,
+unistd.h is the name of the header file that provides access to the POSIX operating system API.
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+
+int main(int argc, char* argv[])
+{
+    int id=fork();
+if(id==0){
+    printf("Hello world from child process and its ID is: %d\n",id);
+}
+else{
+printf("Hello world from parent process and its ID is: %d\n",id);
+}
+
+    return 0;
+}
