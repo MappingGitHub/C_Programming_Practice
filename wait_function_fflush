@@ -1,0 +1,44 @@
+//wait_function
+//How to wait for processes to finish
+/*
+Program: print numbers from 1 to 10 , the first 5 digit with
+child function and the next 5 digit with parent function.
+In this program we want to print first 5 numerical numbers with child function 
+and the next 5 numerical numbers to be printed by parent function
+wait() function can only be in main process
+
+fflush() is typically used for output stream only. Its purpose is to
+ clear (or flush) the output buffer and move the buffered data to 
+console (in case of stdout) or disk (in case of file output stream).
+
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
+
+int main(int argc, char* argv[])
+{
+int id=fork();
+int n;
+if (id==0){
+n=1;
+}else{
+n=6;
+}
+if(id !=0){
+wait();
+}
+
+int i;
+for (i=n; i<n+5;i++){
+printf("%d ",i);
+fflush(stdout);
+}
+
+if(id !=0){
+printf("\n");
+}
+    return 0;
+}
