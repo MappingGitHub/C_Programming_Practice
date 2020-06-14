@@ -1,0 +1,42 @@
+//Multi_processing_HelloWorld_program
+/*
+Problem:
+
+Your task is to create a multi-processing "Hello World" program. Your program should:
+
+    Have one parent process that spawns all the children.
+    This parent should be good for its children and wait() for all of them to finish executing.
+    Each child should identify itself with an integer value, ranging from one to however many processes you spawn, corresponding to 1st process, 2nd process, etc. (Note: this should not be the same as the pid.)
+    Each child should then print to screen the text "Hello World!", as well as its integer ID (ex. "Hello World from child 1")
+    Your program should be able to spawn any reasonable number of processes and this number should be determined by the user.
+    Unlike the code examples written above (that were designed and written for you to figure them out), be sure to include good documentation in your code. This means to include a comment header block as well as in-line comments.
+    
+
+*/
+
+#include <stdio.h>    /* printf              */
+#include <stdlib.h>   /* exit                */
+#include <string.h>
+#include <unistd.h>   /* fork, getpid, sleep */
+#include <sys/wait.h> /* wait                */
+
+int main() 
+{ 
+int num;
+printf("Please enter the number of child that you want to create\n");
+scanf("%d",&num);
+    for(int i=0;i<num;i++) // loop will run num times
+    { 
+        if(fork() == 0) 
+        { 
+            printf("Hello world from Child number %d and its pid number is %d ,This child parent pid is %d\n",i+1,getpid(),getppid()); 
+            exit(0); 
+        } 
+    } 
+    for(int i=0;i<num;i++) // loop will run num times 
+    wait(NULL); 
+    printf("child terminated\n"); 
+  printf("parent exiting\n");
+return 0;
+      
+} 
